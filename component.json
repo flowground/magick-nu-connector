@@ -1,0 +1,162 @@
+{
+    "title": "Tradeworks",
+    "description": "Authentication is required to access all methods of the API. Enter username and password.\n                Credentials are automatically set as you type.",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/magick.nu/1.0/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "http://devui.magick.nu/rest",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "getStrategiesStrategyIdStrategyId": {
+            "main": "./lib/actions/getStrategiesStrategyIdStrategyId.js",
+            "title": "Get Strategy by ID",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getStrategiesStrategyIdStrategyId.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getStrategiesTemplates": {
+            "main": "./lib/actions/getStrategiesTemplates.js",
+            "title": "Get all Template Strategies",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getStrategiesTemplates.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "postTradingAccounts": {
+            "main": "./lib/actions/postTradingAccounts.js",
+            "title": "Add a Trading Account",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postTradingAccounts.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "putTradingAccountsPasswordUsernameBrokerserverMt4username": {
+            "main": "./lib/actions/putTradingAccountsPasswordUsernameBrokerserverMt4username.js",
+            "title": "Update MT4 Account Password",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/putTradingAccountsPasswordUsernameBrokerserverMt4username.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "postUsers": {
+            "main": "./lib/actions/postUsers.js",
+            "title": "Create a new Tradeworks User",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postUsers.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getUsersEmailEmail": {
+            "main": "./lib/actions/getUsersEmailEmail.js",
+            "title": "Check if email is available",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getUsersEmailEmail.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "putUsersPasswordUsername": {
+            "main": "./lib/actions/putUsersPasswordUsername.js",
+            "title": "Update user's password",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/putUsersPasswordUsername.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getUsersUsernameUsername": {
+            "main": "./lib/actions/getUsersUsernameUsername.js",
+            "title": "Check if username is available",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getUsersUsernameUsername.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}
